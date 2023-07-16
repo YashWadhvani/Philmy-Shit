@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Philmy__Shitt
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="/stylesheets/indexStyle.css">
+    <script src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">Philmy__Shitt</h1>
+        <ul class="nav-links">
+            <li class="active"><a class="white" href="/">Home</a></li>
+            <li><a class="white" href="/cinema">Cinema</a></li>
+            <li><a class="white" href="/community">Community</a></li>
+            <li><a class="white" href="/about">About</a></li>
+            <li><a class="white" href="/contact">Contact</a></li>
+            <form>
+                <input type="text" name="search" placeholder="Enter your search query">
+                <button type="submit"><i class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        </ul>
+        <img src="./Images/menubtn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>Explore the Movie from all over the world</h2>
+            <div class="line"></div>
+            <h1>Philmy_Shitt</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+
+    <section class="events">
+        <div class="title">
+            <h1>UPCOMING MOVIES</h1>
+            <div class="line"></div>
+            <div class="row">
+                <% for (let i=0; i < 3; i++){ %>
+                    <% baseUrl='https://image.tmdb.org/t/p/original' %>
+                        <div class="col">
+                            <img class="backdropImg" src=<%- baseUrl + UpcomingHollyMovies[i].backdrop_path %>
+                            alt="Poster">
+                            <h4 style="width: 310px;">
+                                <%- UpcomingHollyMovies[i].title %>
+                            </h4>
+                        </div>
+                        <% } %>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore">
+        <div class="explore-content">
+            <h1 style="color: rgb(12, 14, 16);">EXPLORE THE MOVIES</h1>
+            <div class="line"></div>
+            <p style="font-size: 1.5em; color: gold; background-color: rgb(12, 14, 16,0.6);">
+                Watch Now</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1>UPCOMING MOVIES</h1>
+                <div class="line"></div>
+                <p>Services services services </p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <% baseUrl='https://image.tmdb.org/t/p/original' %>
+                        <% for (let i=3; i<9; i++) { %>
+                            <img src=<%-baseUrl + UpcomingHollyMovies[i].poster_path%> alt="Poster">
+                            <% } %>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>philmy__shitt@example.com</p>
+        <p>&#169 Philmy_Shitt</p>
+    </section>
+
+
+    <script>
+        const menubtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menubtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+
+</html>

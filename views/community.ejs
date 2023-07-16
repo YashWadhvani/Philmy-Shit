@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Community Website</title>
+  <link rel="stylesheet" href="/stylesheets/community.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Philmy__Shitt</h1>
+      <ul class="nav-links">
+        <li class="active"><a class='white' href="/">Home</a></li>
+        <li><a class='white' href="/cinema">Cinema</a></li>
+        <li><a class='white' href="/community">Community</a></li>
+        <li><a class='white' href="/about">About</a></li>
+        <form>
+          <input type="text" name="search" placeholder="Enter your search query">
+          <button type="submit"><i class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i></button>
+      </ul>
+      <img src="./Images/menubtn.png" alt="" class="menu-btn">
+    </nav>
+    <main>
+      <section class="post-form">
+        <h2>Create a Post</h2>
+        <form>
+          <input class="name" type="text" placeholder="Your name">
+          <textarea class="post" placeholder="Write your post here"></textarea>
+          <button class="postb" type="submit">Post</button>
+        </form>
+      </section>
+
+      <section class="posts">
+        <h2>Community Posts</h2>
+        <div class="post">
+          <h3>User1</h3>
+          <p class="pe">This was post given by user 1</p>
+        </div>
+        <!-- More posts will be added dynamically using JavaScript -->
+      </section>
+    </main>
+
+  </header>
+
+  <footer class="footer">
+    <p>&copy; 2023 Community Website. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
